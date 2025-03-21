@@ -1,0 +1,31 @@
+{
+  "name": "comp4170-project-expense-tracker",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeno-wkc/COMP4170-Project-Expense-tracker.git"
+  },
+  "author": "Zeno Wong, Vanessa Huang, Kyanna Krueger, Gloria Chan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zeno-wkc/COMP4170-Project-Expense-tracker/issues"
+  },
+  "homepage": "https://github.com/zeno-wkc/COMP4170-Project-Expense-tracker#readme",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "pg": "^8.14.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}

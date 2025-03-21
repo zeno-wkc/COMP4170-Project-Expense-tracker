@@ -1,0 +1,53 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Recipient</th>
+      <th scope="col">Description</th>
+      <th scope="col">Amount</th>
+      <th scope="col">Category</th>
+      <th scope="col">Date</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% expenses.forEach((expense, index) => { %>
+      <tr id="expense-<%= expense.id %>">
+        <th scope="row"><%= index + 1 %></th>
+        <td><%= expense.recipient %></td>
+        <td><%= expense.description %></td>
+        <td>$<%= expense.amount.toFixed(2) %></td>
+        
+        <!-- Check if category is 'Other' and display custom category if true -->
+        <td>
+          <%= expense.category === "Other" ? expense.custom_category : expense.category %>
+        </td>
+        
+        <td><%= expense.date %></td>
+        <td>
+          <!-- Edit Button -->
+          <button type="button"
+                  class="btn btn-warning btn-sm"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalForm"
+                  data-bs-whatever="Edit Expense"
+                  data-id="<%= expense.id %>"
+                  data-recipient="<%= expense.recipient %>"
+                  data-description="<%= expense.description %>"
+                  data-amount="<%= expense.amount %>"
+                  data-category="<%= expense.category %>"
+                  data-custom_category="<%= expense.custom_category || '' %>"
+                  data-date="<%= expense.date %>">
+            <i class="bi bi-pencil-square"></i>
+            Edit
+          </button>
+
+          <!-- Delete button with confirmation -->
+          <button type="button" class="btn btn-danger btn-sm" onclick="deleteExpense(<%= expense.id %>)">
+            <i class="bi bi-trash"></i> Delete
+          </button>
+        </td>
+      </tr>
+    <% }) %>
+  </tbody>
+</table>

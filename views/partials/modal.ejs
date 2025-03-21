@@ -1,0 +1,20 @@
+<div class="modal modal-dialog modal-dialog-centered fade" id="modalForm" tabindex="-1" aria-labelledby="modalFormLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalFormLabel">Add Expense</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Include the form partial here -->
+        <%- include('form') %>
+      </div>
+      <div class="modal-footer">
+        <!-- Close button -->
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <!-- Save Expense button (to trigger form submission) -->
+        <button type="button" class="btn btn-primary" id="saveExpenseBtn">Save Expense</button>
+      </div>
+    </div>
+  </div>
+</div>

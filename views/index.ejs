@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('partials/head') %> 
+<body>
+  <main>
+    <div class="container mt-4">
+      <h1 class="mb-3 p-4 rounded-3 text-white bg-dark">
+        <i class="bi bi-journal me-1"></i>
+        My Expenses Tracker
+      </h1>
+      <button type="button" class="btn btn-primary float-end" data-bs-toggle="modal" data-bs-target="#modalForm" data-bs-whatever="@Add Expense">
+        <i class="bi bi-plus-square me-1"></i>
+        Add Expense
+      </button>
+      <!-- Table to display expenses -->
+      <%- include('partials/table', { expenses: expenses }) %>
+    </div>
+  </main>
+  <%- include('partials/footer') %>
+  <%- include('partials/modal') %>
+  <script src="/js/modal.js"></script>
+  <script src="/js/delete.js"></script>
+</body>
+</html>
