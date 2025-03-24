@@ -24,7 +24,7 @@ Vanessa Huang
 - Implemented the "Delete Expense" functionality.
 
 Zeno Wong
-- Set up Supabase for database management.
+- Set up and Connect to Supabase for database management.
 - Developed modal.js for handling modals.
 - Implemented error-handling functions.
 - Refined the project for accuracy and bug fixes.
